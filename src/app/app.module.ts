@@ -3,14 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
+import { HttpClientModule } from '@angular/common/http'
+import { FraseService } from './services/frase.service';
+import { FraseComponent } from './frase/frase.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FraseComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FraseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
